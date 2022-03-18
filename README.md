@@ -1,63 +1,40 @@
-## Homework | Week 3
-`Not: Ödevi yeni bir repoya ekleyeceksiniz. Var olan reponuzda bir güncelleme olmayacak. "homework-2..." şeklinde yeni bir repo üzerinde çalışacaksınız.`
+## Homework | Week 3 | 
 
+## Description
+- In this project you can some queries in the booklist. For example, list, search, get, delete and buy.
+- Project is written in go language.
+- I faced with some problems in code like getting the input.
+- I hope to implement some error handling and exiting the program and using it again at the request of the user in the future.
 
-Elimizde bir kitap listesi var. 
-Kitap alanları şöyle;
-```
-- Kitap ID
-- Kitap Adı
-- Sayfa Sayısı
-- Stok Sayısı
-- Fiyatı
-- Stock Kodu
-- ISBN
-- Yazar bilgisi (ID ve İsim)
-```
-
-1. Tüm kitapları listele (list)
-2. Verilen girdi hangi kitap isimlerinde geçiyorsa o kitapları listele (search)
-3. ID'ye göre kitabı yazdır
-4. IDsi verilen kitabı sil. (Silinen kitabın ID'ye göre geliyor olması gerekiyor.)
-5. IDsi verilen kitabı istenilen adet kadar satın al ve kitabın son bilgilerini ekrana yazdır.
-
-Yanlış komut girildiğinde ekrana usage'ı yazdıracak. 
-
-
-Concurrency ile ilgili medium yazısı yazılacak. 
-
-### list command
+## How to Run Project
+There are functions in project and explained below.
+#### list command
+Lists all elements in the list.
 ```
 go run main.go list
 ```
-
-### search command 
+#### search command 
+Checks the movie you entered whether exist in the film list.
 ```
-go run main.go search <bookName>
-go run main.go search Lord of the Ring: The Return of the King
+go run main.go search <filmName>
+go run main.go search Lord of the Ring: The Return of 
 ```
 
-### get command
+#### get command
+Returns book that you typed book's id
 ```
 go run main.go get <bookID>
 go run main.go get 5
 ```
-
-### delete command
+#### delete command 
+Deletes book that you typed book's id
 ```
 go run main.go delete <bookID>
 go run main.go delete 5
 ```
-
-### buy command
+#### buy command 
+Returns the latest information about books after purchasing
 ```
 go run main.go buy <bookID> <quantity>
 go run main.go buy 5 2
 ```
-
-###
-# Requirements:
-- README
-- No third party package(s)
-- Everything should be in English (Comments, Function names, File names, etc.)
-- Use structs not maps
